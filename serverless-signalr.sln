@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "serverless-signalr-shared", "Shared\serverless-signalr-shared.csproj", "{11D75107-63ED-42BF-AEE7-7C21400A34CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "serverless-signalr-server", "Server\serverless-signalr-server.csproj", "{2FBC3AD0-6B80-4F4B-8E34-4623CDE62F62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{688ABEC9-E1BF-46E4-A923-59694DA9254F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11D75107-63ED-42BF-AEE7-7C21400A34CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D75107-63ED-42BF-AEE7-7C21400A34CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D75107-63ED-42BF-AEE7-7C21400A34CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D75107-63ED-42BF-AEE7-7C21400A34CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FBC3AD0-6B80-4F4B-8E34-4623CDE62F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FBC3AD0-6B80-4F4B-8E34-4623CDE62F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FBC3AD0-6B80-4F4B-8E34-4623CDE62F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FBC3AD0-6B80-4F4B-8E34-4623CDE62F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{688ABEC9-E1BF-46E4-A923-59694DA9254F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{688ABEC9-E1BF-46E4-A923-59694DA9254F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{688ABEC9-E1BF-46E4-A923-59694DA9254F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{688ABEC9-E1BF-46E4-A923-59694DA9254F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

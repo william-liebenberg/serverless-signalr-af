@@ -1,0 +1,58 @@
+﻿@page "/counter"
+@using Microsoft.AspNetCore.SignalR.Client
+
+@inject HubConnection HubConnection
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @_currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">+1</button>
+<button class="btn btn-secondary" @onclick="DecrementCount">-1</button>
+<button class="btn btn-warning" @onclick="StreamCount">Stream</button>
+
+@code {
+    private int _currentCount = 0;
+
+    private void IncrementCount()
+    {
+        _currentCount++;
+        SendCount();
+    }
+    
+    private void DecrementCount()
+    {
+        _currentCount--;
+        SendCount();
+    }
+    
+    protected override async Task OnInitializedAsync()
+    {
+        HubConnection.On<int>(methodName: "ReceiveCount", handler: ReceiveCount);
+
+        if (HubConnection.State == HubConnectionState.Disconnected)
+        {
+            await HubConnection.StartAsync();
+        }
+        
+        await base.OnInitializedAsync();
+    }
+    
+    private void ReceiveCount(int count)
+    {
+        _currentCount = count;
+        StateHasChanged();
+    }
+    
+    private void SendCount()
+    {
+        HubConnection.SendAsync(methodName: "SendCount", _currentCount);
+    }
+    
+    private void StreamCount()
+    {
+        HubConnection.SendAsync(methodName: "StreamCount");
+    }
+}

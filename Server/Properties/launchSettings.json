@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "serverless_signalr": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7071",
+      "launchBrowser": false
+    }
+  }
+}
